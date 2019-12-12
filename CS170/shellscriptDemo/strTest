@@ -1,0 +1,30 @@
+#!/bin/bash
+
+str1=""
+str2="Sunny"
+str3="Cloudy"
+
+if [ $str1 ]
+then
+	echo "$str1 is not null"
+fi
+
+if [ -z "$str1" ]
+then
+	echo "str1 exists but is null"
+fi
+
+if [ $str2 == $str3 ]
+then
+	echo "$str2 equals to $str3"
+else
+	echo "$str2 does not equal to $str3"
+fi
+
+if [ $str2 > $str3 ]
+then 
+	echo "$str2 is greater than $str3"
+elif [ $str2 < $str3 ]
+then
+	echo "$str2 is less than $str3"
+fi

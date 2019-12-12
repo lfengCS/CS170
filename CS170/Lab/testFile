@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file1="test_file1.txt"
+
+if [ -e "$file1" ]
+then
+	echo "$file1 exists"
+fi

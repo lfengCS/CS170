@@ -1,0 +1,11 @@
+#!/bin/bash
+
+read -p ">> " str
+
+if [ "$str" != "" ]
+# if [ $str ]
+then	
+	echo "You entered: $str"
+else
+	echo "Where is your input?"
+fi

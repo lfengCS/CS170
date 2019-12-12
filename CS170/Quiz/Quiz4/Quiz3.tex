@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{ifthen,graphicx}
+\usepackage[top=0.6in, bottom=0.9in, left=0.8in, right=0.8in]{geometry}
+%\usepackage[top=1.0in, bottom=1.0in]{geometry}
+
+%\pagestyle{empty}
+\newboolean{KEY}
+%\setboolean{KEY}{true}   %prints questions and answers
+\setboolean{KEY}{false} %prints questions only
+\newcommand{\answer}[1]{\ifthenelse{\boolean{KEY}}{#1}{}}
+\newcommand{\titleheader}[2]{\ifthenelse{\boolean{KEY}}{#1}{#2}}
+
+\begin{document}
+\titleheader{\section*{CS170 SP2019 Quiz 4 Solution}}{\section*{CS170 SP2019 Quiz 4}}
+
+This is a close book, close note quiz. Total points are 10. You have 15 minutes. Don't forget to put your name on the quiz. 
+
+\begin{enumerate}
+
+\item Write a shell script that can provide following three options (1, 2, 3) for the user. The program should continue to run unless user choose the last option to exit. [6]
+\begin{enumerate}
+\item 1. Print only the permission information of all the files and folders under current working directory. 
+\item 2. Ask user to enter a string, then save the string user entered into a file named PID.txt where PID is the process ID number of current running scirpt.
+\item 3. Exit 
+
+\end{enumerate}
+
+
+
+\vspace{4in}
+%\item Write a short script that prompts the user for a string, redirect
+%the output so the program writes the string the user entered to the 
+%temporary file named PID.name where PID is the process ID number of the
+%process running the script. [5]
+%
+%\answer{
+%\texttt{$\#$!$\/$bin$\/$bash}
+%\texttt{read -p "`Enter a string:"' uString}
+%\texttt{$\$$uString >> $\$\$$.name}
+%}
+%\vspace{2in}
+
+\item Briefly explain what are the three stages of compilation. [2]
+\vspace{1.5in}
+ 
+\item What is the advantage of \texttt{make}? How does \texttt{make} work? [2]
+
+\end{enumerate}
+\end{document}

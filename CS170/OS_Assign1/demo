@@ -1,0 +1,7 @@
+#!/bin/bash
+
+NUM1=$1
+NUM2=S2
+SUM=$((NUM1 + NUM2))
+echo "$sum"
+echo $*

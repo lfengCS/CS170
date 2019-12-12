@@ -1,0 +1,12 @@
+#!/bin/bash
+
+perm1=$(ls -l $1 | cut -f1 -d" ")
+perm2=$(ls -lf $2 | cut -f1 -d " ")
+
+if [ "$perm1" == "$perm2" ]
+then
+	echo "$perm1"
+else
+	echo "$1  $perm1"
+	echo "$2  $perm2"
+fi

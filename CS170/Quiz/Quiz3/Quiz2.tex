@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{ifthen,graphicx}
+\usepackage[top=0.6in, bottom=0.9in, left=0.8in, right=0.8in]{geometry}
+%\usepackage[top=1.0in, bottom=1.0in]{geometry}
+
+%\pagestyle{empty}
+\newboolean{KEY}
+%\setboolean{KEY}{true}   %prints questions and answers
+\setboolean{KEY}{false} %prints questions only
+\newcommand{\answer}[1]{\ifthenelse{\boolean{KEY}}{#1}{}}
+\newcommand{\titleheader}[2]{\ifthenelse{\boolean{KEY}}{#1}{#2}}
+
+\begin{document}
+\titleheader{\section*{CS170 SP2019 Quiz 3 Solution}}{\section*{CS170 SP2019 Quiz 3}}
+
+This is a close book, close note quiz. Total points are 10. You have 15 minutes. Don't forget to put your name on the quiz. 
+
+\begin{enumerate}
+
+\item Briefly answer the following questions: [5]
+\begin{enumerate}
+%  \item What is a shell? What is a shell script.
+%  \vspace{0.5in}
+%  \answer{\emph{Shell is a command interpreter which will take user's command and communicate with the kernel to execute. Shell script is a simple program for shell to run.}}
+  
+%  \item Argument is a token that a command acts on. There are zero argument command, one argument command and two arguments command. List at least 3 for each type of command. 
+%  \begin{enumerate} 
+%  \item Zero argument: 
+%  \answer{\emph{pwd, ls, hostname}} 
+%  \item One argument: 
+%  \answer{\emph{cat, cd, echo}}
+%  \item Two arguments: 
+%  \answer{\emph{cp, mv, grep, ls}}
+%  \end{enumerate}
+%	\vspace{0.1in}
+\item The shell script can work with command-line arguments. Explain the following symbols appear in the shell script.
+\begin{enumerate}
+\item $\$0$
+\item $\$1$
+\item $\$2$
+\item $\$*$
+\item $\$\#$
+\end{enumerate}
+\vspace{0.2in}
+
+  \item What are the two major modes of vim editor?
+  \vspace{0.5in}
+  \answer{\emph{Command mode and input mode.}}
+  
+	\item What is a pipe?
+	\vspace{0.5in}
+	\answer{\emph{Consists of one or more commands separated by a pipe symbol(|). }}
+	
+	\item What is a filter?
+	\vspace{0.5in}
+	\answer{\emph{A command that processes an input stream of data to produce an output stream of data.}}
+  \end{enumerate}
+
+\item What do the following Unix commands do? [5]  
+\begin{enumerate}
+\item cat part1 part2 part3 $>$ book
+\vspace{0.3in}
+\item who $>>$ whoson
+\vspace{0.3in}
+\item command1 $<$ someFile 
+\vspace{0.3in}
+\item ./program2
+\vspace{0.3in}
+\item cat file1 $|$ sort $|$ less
+\vspace{0.3in}  
+\item ps $|$ grep bash
+\vspace{0.2in}
+\item ls -l $|$ lpr $\&$
+\vspace{0.3in}
+\item kill 7324
+\vspace{0.3in}
+\end{enumerate}
+
+\answer{\begin{enumerate}
+\item \emph{A book file has been created to contain the content of three files: part1, part2 and part3}
+
+\item \emph{Appending to file whoson with online user list}
+
+\item \emph{Using someFile as the input for command1}
+
+\item \emph{Executing program2}
+
+\item \emph{show sorted the file1 page-wise}
+
+\item \emph{search bash in the current process list}
+
+\item \emph{Stop a process with ID 7324}
+\end{enumerate}}
+
+%\item Assuming the following files are in the working directory: 
+%
+%\begin{tabular}{l l l l l l}
+%$\$ \texttt{ls}$ & & & & &\\
+%intro & notesb & ref2 & section1 & section2 & section4b \\
+%notesa & ref1  & ref3 & section2 & section4a & sentrev \\
+%\end{tabular}
+
+%What are the results after executing the following commands? [6]
+%\begin{enumerate}
+%\item \texttt{ls sec*}
+%\vspace{0.5in}
+%\item \texttt{ls ref?} 
+%\vspace{0.5in}
+%\item \texttt{ls section[1-3]}  
+%\vspace{0.5in}
+%\item \texttt{ls i*}
+%\vspace{0.5in}
+%\item \texttt{ls *[13]} 
+%\vspace{0.5in}
+%\item \texttt{ls note?[ab]} 
+%\vspace{0.5in}
+%\end{enumerate}
+%
+%
+%\answer{\begin{enumerate}
+%\item \emph{section1 section3 section4b section2 section4a}
+%
+%\item \emph{ref2 ref1 ref3}
+%
+%\item \emph{section1 section2 section3}
+%
+%\item \emph{intro}
+%
+%\item \emph{section1 ref1 ref3}
+%
+%\item \emph{notesa notesb}
+%
+%\end{enumerate}}
+
+\end{enumerate}
+\end{document}

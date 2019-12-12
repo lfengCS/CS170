@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "This is $0"
+echo "first argument: $1"
+echo "second argument: $2"
+
+sum=0
+
+while [ $# -gt 0 ]
+do
+	num=$1
+	sum=$((sum + num))
+	# shif moves the value of $2 into $1 until none are left
+	# the value of $# also decrease
+	shift
+done
+
+echo "sum: $sum"   

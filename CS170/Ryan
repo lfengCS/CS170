@@ -1,0 +1,51 @@
+#!/bin/bash
+echo "Welcome 
+------------------------------
+Select a menu option: 
+1 - Ancestry history
+2 - Who is online
+3 - What process is any user running
+4 - Exit"
+
+read menuChoice
+while :
+do
+	if [ $menuChoice == 1 ]
+		then
+			ps -ef | awk '{if(NR>1) print $2 "\n|" }'
+			echo "-----------------------------
+Select a menu option:1
+1 - Ancestry history
+2 - Who is online
+3 - What process is any user running
+4 - Exit"
+			read menuChoice
+
+	elif [ $menuChoice == 2 ]
+		then 
+			who
+			echo "-----------------------------
+Select a menu option:
+1 - Ancestry history
+2 - Who is online
+3 - What process is any user running
+4 - Exit"
+			read menuChoice
+
+	elif [ $menuChoice == 3 ]
+		then
+			ps -u
+			echo "-----------------------------
+Select a menu option:
+1 - Ancestry option
+2 - Who is online 
+3 - What process is any user running
+4 - Exit"
+			read menuChoice
+
+	elif [ $menuChoice == 4 ]
+		then
+			break
+	fi
+done
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+read -p "Enter a file name: " file
+
+if [ -e $file ]
+then
+	cp "$file" "$file.bak"
+else
+	touch $file
+	echo "$file has been created."
+fi

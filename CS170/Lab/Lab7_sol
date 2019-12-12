@@ -1,0 +1,69 @@
+#!/bin/bash
+
+echo "Welcome"
+
+option=1
+
+# Use an infinite loop for users' convenience
+while [ $option -ne 0 ]
+do
+	echo "---------------------------------------------------------"
+	echo "1. Print out ancestry tree."
+	echo "2. Print out currently logged in users."
+	echo "3. Print out running proecess used by the selected user."
+	echo "4. Quit."
+  echo "---------------------------------------------------------"
+	read -p "Enter an option: " option
+	case $option in
+		# print out ancestry tree
+		1)
+			currentPID=$$
+			echo $currentPID
+		
+			ps -ef > tmpFile
+		
+			while [ $currentPID -ne 1 ]
+			do
+				echo "   |"
+				currentPID=$(awk '{if ( $2 == '$currentPID' ) print $3 }' tmpFile)
+				echo $currentPID
+			done
+
+			rm tmpFile
+			;;
+
+		# print out only user name
+		2)
+			who | cut -f1 -d" "
+			;;
+
+		# print out a list of existing user with specific format
+	  # 1) user1
+		# 2) user2
+		# ask user to enter who they want to view
+		# then print out corresponding process for that user
+		3)
+			index=1
+			who | while read line
+			do
+				echo "$index $line ">> userList
+				index=$(($index+1))
+			done
+			
+			cat userList | while read line
+			do
+				echo $line | cut -f1 -f2 -d" "
+			done
+
+			read -p "which user do you choose?" user
+			
+			desiredUser=$(awk '{ if ( $1 == '$user') print $2}' userList)
+			echo $desiredUser
+			ps -ef | grep $desiredUser
+			rm userList
+			;;
+		4)
+			exit
+			;;
+	esac
+done

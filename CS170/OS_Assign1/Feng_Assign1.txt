@@ -1,0 +1,128 @@
+Script started on Fri 03 Feb 2017 10:04:39 AM EST
+]0;li@li-VirtualBox: ~/Downloads[01;32mli@li-VirtualBox[00m:[01;34m~/Downloads[00m$ sh assig[K[K[K[K[K[K[K[Ksh assign1
+WELCOME
+--------------------------------
+Select a menu option
+1 - ancestry history
+2 - who is online
+3 - what process any user is running
+4 - exit
+1
+ 
+ 
+The ancestry tree for current process is ... 
+ 
+ 
+9447
+  |  
+9446
+  |  
+21144
+  |  
+21138
+  |  
+1016
+  |  
+976
+  |  
+806
+  |  
+1
+ 
+ 
+Select a menu option
+1 - ancestry history
+2 - who is online
+3 - what process any user is running
+4 - exit
+2
+li
+Select a menu option
+1 - ancestry history
+2 - who is online
+3 - what process any user is running
+4 - exit
+3
+Select a currently online user to view his processes:
+0) li
+0
+li 987 1 0 Feb02 ? 00:00:00 /lib/systemd/systemd --user
+li 989 987 0 Feb02 ? 00:00:00 (sd-pam)
+li 1016 976 0 Feb02 ? 00:00:00 /sbin/upstart --user
+li 1122 1016 0 Feb02 ? 00:00:00 upstart-udev-bridge --daemon --user
+li 1129 1016 0 Feb02 ? 00:00:02 dbus-daemon --fork --session --address=unix:abstract=/tmp/dbus-BF27s2TbEc
+li 1142 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/hud/window-stack-bridge
+li 1163 1016 0 Feb02 ? 00:00:00 gnome-keyring-daemon --start --components pkcs11,secrets
+li 1189 1016 0 Feb02 ? 00:00:01 /usr/lib/x86_64-linux-gnu/bamf/bamfdaemon
+li 1193 1016 0 Feb02 ? 00:00:03 gpg-agent --homedir /home/li/.gnupg --use-standard-socket --daemon
+li 1206 1016 0 Feb02 ? 00:00:00 upstart-dbus-bridge --daemon --session --user --bus-name session
+li 1207 1016 0 Feb02 ? 00:00:13 /usr/bin/ibus-daemon --daemonize --xim
+li 1209 1016 0 Feb02 ? 00:00:00 upstart-dbus-bridge --daemon --system --user --bus-name system
+li 1211 1016 0 Feb02 ? 00:00:00 upstart-file-bridge --daemon --user
+li 1232 1016 0 Feb02 ? 00:00:00 /usr/lib/gvfs/gvfsd
+li 1242 1016 0 Feb02 ? 00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+li 1244 1207 0 Feb02 ? 00:00:00 /usr/lib/ibus/ibus-dconf
+li 1245 1207 0 Feb02 ? 00:00:01 /usr/lib/ibus/ibus-ui-gtk3
+li 1259 1016 0 Feb02 ? 00:00:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+li 1266 1016 0 Feb02 ? 00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+li 1273 1266 0 Feb02 ? 00:00:00 /usr/bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+li 1277 1016 0 Feb02 ? 00:00:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+li 1368 1207 0 Feb02 ? 00:00:04 /usr/lib/ibus/ibus-engine-simple
+li 1416 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/hud/hud-service
+li 1418 1016 0 Feb02 ? 00:00:02 /usr/lib/unity-settings-daemon/unity-settings-daemon
+li 1427 1016 0 Feb02 ? 00:00:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+li 1432 1016 0 Feb02 ? 00:00:05 /usr/lib/x86_64-linux-gnu/unity/unity-panel-service
+li 1453 1016 2 Feb02 ? 00:28:53 compiz
+li 1472 1016 0 Feb02 ? 00:00:00 /usr/lib/dconf/dconf-service
+li 1477 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/indicator-messages/indicator-messages-service
+li 1478 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/indicator-bluetooth/indicator-bluetooth-service
+li 1484 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/indicator-power/indicator-power-service
+li 1485 1016 0 Feb02 ? 00:00:01 /usr/lib/x86_64-linux-gnu/indicator-datetime/indicator-datetime-service
+li 1487 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/indicator-keyboard/indicator-keyboard-service --use-gtk
+li 1488 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/indicator-sound/indicator-sound-service
+li 1491 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/indicator-printers/indicator-printers-service
+li 1494 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/indicator-session/indicator-session-service
+li 1500 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/indicator-application/indicator-application-service
+li 1516 1016 0 Feb02 ? 00:00:00 /usr/lib/evolution/evolution-source-registry
+li 1525 1016 0 Feb02 ? 00:00:00 /usr/bin/pulseaudio --start --log-target=syslog
+li 1585 1016 0 Feb02 ? 00:00:00 /usr/lib/evolution/evolution-calendar-factory
+li 1596 1427 0 Feb02 ? 00:00:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+li 1597 1427 0 Feb02 ? 00:00:00 nm-applet
+li 1598 1427 0 Feb02 ? 00:00:00 /usr/lib/unity-settings-daemon/unity-fallback-mount-helper
+li 1600 1427 0 Feb02 ? 00:00:05 nautilus -n
+li 1607 1585 0 Feb02 ? 00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory contacts --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1585x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1585/2
+li 1621 1016 0 Feb02 ? 00:00:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+li 1673 1585 0 Feb02 ? 00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory local --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1585x3 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1585/3
+li 1675 1016 0 Feb02 ? 00:00:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+li 1683 1016 0 Feb02 ? 00:00:00 /usr/lib/evolution/evolution-addressbook-factory
+li 1758 1016 0 Feb02 ? 00:00:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+li 1774 1016 0 Feb02 ? 00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+li 1782 1016 0 Feb02 ? 00:00:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+li 1791 1683 0 Feb02 ? 00:00:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory local --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1683x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1683/2
+li 1796 1016 0 Feb02 ? 00:00:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.6 /org/gtk/gvfs/exec_spaw/0
+li 1936 1427 0 Feb02 ? 00:00:01 zeitgeist-datahub
+li 1943 1016 0 Feb02 ? 00:00:00 /bin/sh -c /usr/lib/x86_64-linux-gnu/zeitgeist/zeitgeist-maybe-vacuum; /usr/bin/zeitgeist-daemon
+li 1947 1943 0 Feb02 ? 00:00:00 /usr/bin/zeitgeist-daemon
+li 1955 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/zeitgeist-fts
+li 5311 1427 0 Feb02 ? 00:00:01 update-notifier
+li 5344 1427 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/deja-dup/deja-dup-monitor
+li 6007 1016 0 Feb02 ? 00:00:00 /usr/lib/x86_64-linux-gnu/notify-osd
+li 9446 21144 0 10:04 pts/4 00:00:00 script Feng_Assign1
+li 9447 9446 0 10:04 pts/17 00:00:00 bash -i
+li 9462 9447 0 10:04 pts/17 00:00:00 sh assign1
+li 9506 9462 0 10:05 pts/17 00:00:00 ps -ef
+li 9507 9462 0 10:05 pts/17 00:00:00 sh assign1
+li 21138 1016 0 05:58 ? 00:00:21 /usr/lib/gnome-terminal/gnome-terminal-server
+li 21144 21138 0 05:58 pts/4 00:00:00 bash
+ 
+ 
+Select a menu option
+1 - ancestry history
+2 - who is online
+3 - what process any user is running
+4 - exit
+4
+]0;li@li-VirtualBox: ~/Downloads[01;32mli@li-VirtualBox[00m:[01;34m~/Downloads[00m$ exit
+exit
+
+Script done on Fri 03 Feb 2017 10:05:19 AM EST

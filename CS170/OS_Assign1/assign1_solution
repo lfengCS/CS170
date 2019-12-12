@@ -1,0 +1,74 @@
+#!/bin/sh
+
+echo "WELCOME"
+echo "--------------------------------"
+
+answer=0
+while test "$answer" != "4"
+    do 
+	echo "Select a menu option"
+	echo "1 - ancestry history"
+	echo "2 - who is online"
+	echo "3 - what process any user is running"
+	echo "4 - exit"
+	read answer
+   case "$answer" in 
+   '3')
+   
+   who | while read user
+	do 
+	    echo $user | cut -f1 -d' ' >> userlist
+        done
+
+   echo "Select a currently online user to view his processes:"
+   inc=0
+   while read user
+	do
+	    echo "$inc) $user"
+	    echo "$inc) $user" >> userlist2
+	    inc=$(($inc + 1))
+	done < userlist
+   rm userlist
+   
+   read user
+   desireduser=$(cat userlist2 | grep $user | cut -f2 -d' ')
+   ps -ef | grep $desireduser
+   ps -ef | while read process
+        do
+	    temp=`echo $process | cut -f1 -d" "`
+	    if [ $temp = $desireduser ]
+            then 
+	        echo $process
+            fi
+        done
+   rm userlist2
+   
+   echo " "
+   echo " "
+;;
+
+   '2')
+   echo $(who | cut -f1 -d' ')
+;;
+   '1')
+  
+   echo " "
+   echo " "
+   echo "The ancestry tree for current process is ... "
+   echo " "
+   echo " "
+
+   currentID=$(ps -ef | grep bash | grep $PPID | awk '{print $2}')
+   echo "$currentID"
+   ps -ef > tempFile
+   while [ $currentID -ne 1 ]
+	do 
+	    echo "  |  "
+	    currentID=`awk '{if ($2 == '$currentID')print;}' tempFile | awk '{print $3}'`
+	    echo "$currentID"
+	done
+   echo " "
+   echo " "
+   rm tempFile
+esac
+done
