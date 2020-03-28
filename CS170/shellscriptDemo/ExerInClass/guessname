@@ -1,0 +1,18 @@
+#!/bin/bash
+
+secretname=agent007
+
+#read -p "Guess the secret name: " name
+if [ $# = 0 ]
+then
+	echo "Usage: one argument needed ..."
+elif [ $# = 1 ]
+then
+	name=$1
+
+	until [ "$name" = "$secretname" ]
+	do
+		read -p "Guess the secret name: " name
+	done
+	echo "Great Job."
+fi

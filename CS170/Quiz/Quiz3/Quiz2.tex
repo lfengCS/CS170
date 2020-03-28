@@ -11,13 +11,13 @@
 \newcommand{\titleheader}[2]{\ifthenelse{\boolean{KEY}}{#1}{#2}}
 
 \begin{document}
-\titleheader{\section*{CS170 SP2019 Quiz 3 Solution}}{\section*{CS170 SP2019 Quiz 3}}
+\titleheader{\section*{CS170 SP2020 Quiz 3 Solution}}{\section*{CS170 SP2020 Quiz 3}}
 
-This is a close book, close note quiz. Total points are 10. You have 15 minutes. Don't forget to put your name on the quiz. 
+This is a close book, close note quiz. Total points are 10. You have 10 minutes. Don't forget to put your name on the quiz. 
 
 \begin{enumerate}
 
-\item Briefly answer the following questions: [5]
+\item Briefly answer the following questions: [2]
 \begin{enumerate}
 %  \item What is a shell? What is a shell script.
 %  \vspace{0.5in}
@@ -33,15 +33,15 @@ This is a close book, close note quiz. Total points are 10. You have 15 minutes.
 %  \answer{\emph{cp, mv, grep, ls}}
 %  \end{enumerate}
 %	\vspace{0.1in}
-\item The shell script can work with command-line arguments. Explain the following symbols appear in the shell script.
-\begin{enumerate}
-\item $\$0$
-\item $\$1$
-\item $\$2$
-\item $\$*$
-\item $\$\#$
-\end{enumerate}
-\vspace{0.2in}
+%\item The shell script can work with command-line arguments. Explain the following symbols appear in the shell script.
+%\begin{enumerate}
+%\item $\$0$
+%\item $\$1$
+%\item $\$2$
+%\item $\$*$
+%\item $\$\#$
+%\end{enumerate}
+%\vspace{0.2in}
 
   \item What are the two major modes of vim editor?
   \vspace{0.5in}
@@ -51,29 +51,29 @@ This is a close book, close note quiz. Total points are 10. You have 15 minutes.
 	\vspace{0.5in}
 	\answer{\emph{Consists of one or more commands separated by a pipe symbol(|). }}
 	
-	\item What is a filter?
-	\vspace{0.5in}
-	\answer{\emph{A command that processes an input stream of data to produce an output stream of data.}}
+%	\item What is a filter?
+%	\vspace{0.5in}
+%	\answer{\emph{A command that processes an input stream of data to produce an output stream of data.}}
   \end{enumerate}
 
 \item What do the following Unix commands do? [5]  
 \begin{enumerate}
 \item cat part1 part2 part3 $>$ book
-\vspace{0.3in}
+\vspace{0.5in}
 \item who $>>$ whoson
-\vspace{0.3in}
+\vspace{0.5in}
 \item command1 $<$ someFile 
-\vspace{0.3in}
+\vspace{0.5in}
 \item ./program2
-\vspace{0.3in}
+\vspace{0.5in}
 \item cat file1 $|$ sort $|$ less
-\vspace{0.3in}  
-\item ps $|$ grep bash
-\vspace{0.2in}
-\item ls -l $|$ lpr $\&$
-\vspace{0.3in}
-\item kill 7324
-\vspace{0.3in}
+\vspace{0.5in}  
+%\item ps $|$ grep bash
+%\vspace{0.5in}
+%\item ls -l $|$ lpr $\&$
+%\vspace{0.5in}
+%\item kill 7324
+%\vspace{0.5in}
 \end{enumerate}
 
 \answer{\begin{enumerate}
@@ -92,45 +92,45 @@ This is a close book, close note quiz. Total points are 10. You have 15 minutes.
 \item \emph{Stop a process with ID 7324}
 \end{enumerate}}
 
-%\item Assuming the following files are in the working directory: 
-%
-%\begin{tabular}{l l l l l l}
-%$\$ \texttt{ls}$ & & & & &\\
-%intro & notesb & ref2 & section1 & section2 & section4b \\
-%notesa & ref1  & ref3 & section2 & section4a & sentrev \\
-%\end{tabular}
+\item Assuming the following files are in the working directory: 
 
-%What are the results after executing the following commands? [6]
-%\begin{enumerate}
+\begin{tabular}{l l l l l l}
+$\$ \texttt{ls}$ & & & & &\\
+intro & notesb & ref2 & section1 & section3 & section4b \\
+notesa & ref1  & ref3 & section2 & section4a & sentrev \\
+\end{tabular}
+
+What are the results after executing the following commands? [3]
+\begin{enumerate}
 %\item \texttt{ls sec*}
 %\vspace{0.5in}
-%\item \texttt{ls ref?} 
-%\vspace{0.5in}
-%\item \texttt{ls section[1-3]}  
-%\vspace{0.5in}
-%\item \texttt{ls i*}
-%\vspace{0.5in}
+\item \texttt{ls ref?} 
+\vspace{0.5in}
+\item \texttt{ls section[1-4]}  
+\vspace{0.5in}
+\item \texttt{ls i*}
+\vspace{0.5in}
 %\item \texttt{ls *[13]} 
 %\vspace{0.5in}
 %\item \texttt{ls note?[ab]} 
 %\vspace{0.5in}
-%\end{enumerate}
-%
-%
-%\answer{\begin{enumerate}
-%\item \emph{section1 section3 section4b section2 section4a}
-%
-%\item \emph{ref2 ref1 ref3}
-%
-%\item \emph{section1 section2 section3}
-%
-%\item \emph{intro}
-%
-%\item \emph{section1 ref1 ref3}
-%
-%\item \emph{notesa notesb}
-%
-%\end{enumerate}}
+\end{enumerate}
+
+
+\answer{\begin{enumerate}
+\item \emph{section1 section3 section4b section2 section4a}
+
+\item \emph{ref2 ref1 ref3}
+
+\item \emph{section1 section2 section3}
+
+\item \emph{intro}
+
+\item \emph{section1 ref1 ref3}
+
+\item \emph{notesa notesb}
+
+\end{enumerate}}
 
 \end{enumerate}
 \end{document}

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+read var
+if [[ $((var %3)) == 0 && $((var %5)) == 0 ]]
+then
+  echo Fizzbuzz
+elif [[ $((var % 3)) == 0 ]]
+then
+  echo Fizz
+elif [[ $((var % 5)) == 0 ]]
+then
+	echo Buzz
+else 
+	echo $var
+fi

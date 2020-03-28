@@ -1,0 +1,20 @@
+#!/bin/bash
+
+read -p "Enter the first file: " f1
+read -p "Enter the second file: " f2
+
+if [[ -e $f1 && -e $f2 ]]
+then
+	perm1=$(ls -l $f1 | cut -f1 -d' ')
+	perm2=$(ls -l $f2 | cut -f1 -d' ')
+	if [ $perm1 = $perm2 ]
+	then
+		echo $perm1
+	else
+		echo $f1 $perm1
+		echo $f2 $perm2
+	fi
+else
+	echo "Files are not exists"
+fi
+

@@ -1,0 +1,33 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\title{CS170 Exercise \#1}
+\author{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Download the ``science.txt" from iLearn.
+
+\item Clear the screen using utility \texttt{clear}
+
+\item Using the following four commands to display the contents of a file on the screen
+\begin{enumerate}
+\item \texttt{cat} (concatenate): \texttt{cat science.txt}
+\item \texttt{less}: \texttt{less science.txt}, then press space(see another page) or q (quit)
+\item \texttt{head}: \texttt{head science.txt}, \texttt{head -5 science.txt}
+\item \texttt{tail}: \texttt{tail science.txt}, \texttt{tail -15 science.txt}
+\end{enumerate}
+
+\item Using the following three commands to search the contents of a file
+\begin{enumerate}
+\item \texttt{less science.txt}, in it type a forward slash / followed by the specified words or pattern (in single quote)
+\item \texttt{grep science science.txt}: many options see \texttt{man grep}
+\item \texttt{wc science.txt}: options also exists
+\end{enumerate}
+
+\item Copying files: \texttt{cp science.txt science.bak}
+
+\item Moving files: \texttt{mv science.bak backup/} (Hint: create directory first)
+
+\item Remove files: \texttt{rm}
+\end{enumerate}
+\end{document}

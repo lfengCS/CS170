@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#menu interface to simple commands
+
+echo " COMMAND MENU"
+echo " D/d. Current date and time"
+echo " U/u. Users currently logged in"
+echo " W/w. Name of the current working directory"
+echo " L/l. Contens of current working directory"
+
+read -p "Enter D, U, W, L to pick an option: " answer
+
+case "$answer" in
+	D|d) 
+		date
+		;;
+	U|u)
+		who
+		;;
+	W|w)
+		pwd
+		;;
+	L|l)
+		ls
+		;;
+	*)
+		echo "There is no selection: $answer"
+		;;
+esac
+echo
+
